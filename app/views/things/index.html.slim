@@ -1,0 +1,42 @@
+<!--
+<div class="container">
+  <h1 class="text-center">Things</h1>
+  <% if @things %>
+    <table class="table">
+      <thead>
+        <th>Name</th>
+        <th>Description</th>
+      </thead>
+      <tbody>
+        <% @things.each do |thing| %>
+          <tr>
+            <td><%= thing.name%></td>
+            <td><%= thing.description%></td>
+            <td><%= link_to "edit", edit_thing_path(id: thing.id) %></td>
+            <td><%= link_to "delete", thing_path(id: thing.id), method: "delete", data: {confirm: "Are you sure?"} %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  <% end %>
+  <h3>Add New Thing</h3>
+  <%= link_to "Add", new_thing_path %>
+</div> -->
+div.container
+  h1.text-center Things
+  - unless @things.empty?
+      table.table
+        thead
+          th name
+          th Description
+        tbody
+          - @things.each do |thing|
+            tr
+              td #{thing.name}
+              td #{thing.description}
+              td = link_to "edit", edit_thing_path(id: thing.id)
+              td = link_to "delete", thing_path(id: thing.id), method: "delete", data: {confirm: "Are you sure?"}
+  - else
+    p.text-center No Things Yet!
+  h3 Add New Thing
+  = link_to "Add", new_thing_path

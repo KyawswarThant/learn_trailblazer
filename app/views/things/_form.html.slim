@@ -1,0 +1,11 @@
+div.container
+  = form_with model: @thing, url: url do |form|
+    div
+      = form.label :name
+      = form.text_field :name, class: "form-control"
+    div
+      = form.label :description
+      = form.text_field :description, class: "form-control"
+    div.mt-2
+      = form.submit value, class: "btn btn-primary me-2"
+      = link_to "cancel", things_path, class: "btn btn-secondary"
