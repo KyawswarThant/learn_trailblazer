@@ -1,10 +1,5 @@
 module Thing::Operation
-  class Destroy < Trailblazer::Operation
-    # step :process
-    # def process(options, params)
-    #   @thing = Thing.find(params[:params][:id])
-    #   @thing.destroy
-    # end
+  class Destroy < Trailblazer::Operationx
     step Model(Thing, :find_by)
     step :delete!
 
