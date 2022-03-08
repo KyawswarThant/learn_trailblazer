@@ -1,5 +1,5 @@
 module Thing::Operation
-  class Destroy < Trailblazer::Operationx
+  class Destroy < Trailblazer::Operation
     step Model(Thing, :find_by)
     step :delete!
 

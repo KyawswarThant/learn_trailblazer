@@ -6,15 +6,17 @@ class ThingsController < ApplicationController
     end
 
     def new
-        @thing = Thing.new
+        run Thing::Operation::Create::Present
     end
 
     def create
-        run Thing::Operation::Create do |result|
+        result = run Thing::Operation::Create
+        if result.success?
             return redirect_to things_path
-            print "result => #{result}"
+        else
+            @errors = result["contract.default"].errors.messages
+            render :new
         end
-        render :new
     end
 
     def edit
