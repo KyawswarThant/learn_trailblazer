@@ -1,0 +1,5 @@
+.container
+    = form_with url: thing_new_csv_path do |form|
+        = form.file_field :csv, class: "form-control"
+        = form.submit :upload, class: "btn btn-primary mt-2"
+        

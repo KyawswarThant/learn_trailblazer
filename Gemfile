@@ -33,6 +33,11 @@ gem 'reform-rails'
 gem 'slim-rails'
 gem 'rspec'
 gem 'trailblazer-rails'
+gem 'sidekiq'
+gem 'redis'
+gem 'redis-namespace'
+gem 'redis-rails'
+gem 'dotenv-rails'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
