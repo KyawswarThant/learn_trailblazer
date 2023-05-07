@@ -1,24 +1,29 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
+This is a Ruby on Rails CRUD with Trailblazer architecture
 
 * Ruby version
-
+    ````
+    2.7.5
+    ````
 * System dependencies
-
-* Configuration
-
+    ````
+    trailblazer-rails
+    slim-rails
+    reform-rails
+    sidekiq
+    ````
 * Database creation
+    ````
+    rails db:create
+    rails db:migrate
+    ````
 
 * Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+    ````
+    rails db:seed
+    ````
+* Run
+    ```
+    rails s
+    ````
